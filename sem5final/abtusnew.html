@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulance Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.16.0/font/bootstrap-icons.css">
+
+    <!-- Add Bootstrap Icons CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include Bootstrap Icons CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.16.0/font/bootstrap-icons.css">
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Slightly darker shadow color */
+            padding: 10px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #040081;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin-left: 400px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .nav-links a i {
+            color: #fc3468; /* Blue color */
+        }
+
+        .nav-links li a:hover {
+            color:	#fc3468;
+        }
+
+        .book-now-button {
+            display: inline-block;
+            padding: 10px;
+            background-color: 	#fc3468;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .book-now-button:hover {
+            background-color: 	#fc3468;
+            color: #f7f7f7;
+            text-decoration: none;
+        }
+        .card-section {
+            background-color: #ffffff;
+            padding: 10px 0;
+        }
+
+        .card-container {
+            width: 100%;
+            min-height: 100%;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            background-color: 	#fff;
+            
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+.container1 {
+    top:100px;
+    margin:auto;
+    bottom:100px;
+    width: 1300px;
+    min-height: 100%;
+    position: relative;
+    font-family: Arial, Helvetica,sans-serif;
+    /* box-shadow: 0 0 30px 0 rgba(148,146,245,.2);    */
+}
+.container1 #mid-cont {
+    top: 150px;
+    position: relative;
+    transition: .5s;
+    
+}
+.container1 #about {
+    position: relative;
+    width: 1100px;
+    margin: auto;
+    opacity: 1!important;
+}
+
+.underlines {
+    width: 240px;
+    height: 20px;
+    position: relative;
+    margin: auto;
+    margin-bottom: 20px!important;
+}
+.line {
+    width: 100px;
+    border: 1px solid #040081;
+}
+.line-inl {
+    display: inline-block;
+    margin-right: 2px;
+}
+.circle {
+    width: 20px;
+    height: 20px;
+    background: #fc3468;
+    border-radius: 30px;
+    vertical-align: middle;
+}
+.page-divs {
+    padding: 10px;
+    top: 150px;
+}
+.con-type {
+    opacity: 0;
+    transition: .5s;
+    position: relative;
+    top: 20px;
+}
+@keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+
+            <div class="logo"><img src ="logo.jpg" height="75px" width="75px" style="justify-content: center; margin-bottom: auto;">Medicare</div>
+            <ul class="nav-links">
+                <li><a href="Home.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+                <li><a href="service.html"><i class="bi bi-tools"></i> Services</a></li>
+                <li><a href="abtusnew.html"><i class="bi bi-info-circle-fill"></i> About Us</a></li>
+                <li><a href="#"><i class="bi bi-envelope-fill"></i> Contact</a></li>
+            </ul>
+            <a href="login.html" class="book-now-button"><i class="bi bi-person-fill"></i> Login/Signup</a>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container1">
+    <div id="mid-cont" style="position: relative;
+    width: 1100px;
+    top:100px;
+    margin: auto;
+    opacity: 1!important;">
+    <div id="about" class="page-divs con-type" style="opacity: 1; top: 0px;">
+                <center><h1>ABOUT US</h1></center>
+                <div class="underlines">
+                    <div class="line line-inl"></div>
+                    <div class="circle line-inl"></div>
+                    <div class="line line-inl"></div>
+                </div>
+                <div class="content fade-in">
+                    <section class="card-section">
+                        <div class="card-container">
+                            <div class="card">
+                            <h2>Who we are</h2>
+                            <p>Our mission is to deliver swift and efficient medical transportation services, offering a lifeline to those in critical need. We prioritize patient care and comfort, striving to reach the destination in the shortest possible time while maintaining the highest standards of medical care. This medical emergency platform will help the citizens to book an ambulance using a mobile app and track the vehicle once it is assigned and predict the time when it will reach the desired venue. The fare paid for the ambulance will be predictable and the user will have a very seamless experience at the time when his or her mind is in turmoil due to the emergency happening in the household. DIAL4242 is a start-up by 2 individuals, one from technology background and another one from the advertising/digital media background.
+
+                                Our strength lies in the fact that we put more care into all aspects related to health, first through getting the ambulance to the patient on time and for the right price and then ensuring that doctors, nurses, medical equipment will be made available to the people in a seamless manner. We have set ourselves on a mission to create healthy tomorrows by putting people first.
+                                
+                                So, in case of medical emergency, we can encourage people to just DIAL4242!</p>
+                            </div>
+                        </div>
+                    </section>
+			    </div>
+            </div>
+
+            <div id="about" class="page-divs con-type" style="opacity: 1; top: 0px;">
+                <div class="content fade-in">
+                    <section class="card-section">
+                        <div class="card-container">
+                          <div class="card">
+                            <h2>Why trust us</h2>
+                            <p>Our team is composed of skilled paramedics, EMTs, drivers, and support staff, all of whom are trained to handle a variety of medical emergencies with compassion and expertise. We are united by a shared dedication to saving lives and providing the best care possible.</p>        
+                          </div>
+                          
+                        </div>
+                    </section>
+			    </div>
+            </div>
+
+            <div id="about" class="page-divs con-type" style="opacity: 1; top: 0px;">
+                <div class="content fade-in">
+                    <section class="card-section">
+                        <div class="card-container">
+                            <div class="card">
+                                <h2>Our services</h2>
+                                <p>At Ambulance Services, we believe that every second counts in an emergency. That's why we have invested in state-of-the-art medical equipment and vehicles that are equipped to handle a wide range of medical situations. Our commitment to excellence is unwavering, and we constantly strive to improve our services.</p>
+                            </div>
+                          
+                        </div>
+                    </section>
+			    </div>
+            </div>
+
+            <div id="about" class="page-divs con-type" style="opacity: 1; top:0px;">
+                <div class="content fade-in">
+                    <section class="card-section">
+                        <div class="card-container">
+                            <div class="card">
+                                <h2>Our Team</h2>
+                                <p>At Ambulance Services, we believe that every second counts in an emergency. That's why we have invested in state-of-the-art medical equipment and vehicles that are equipped to handle a wide range of medical situations. Our commitment to excellence is unwavering, and we constantly strive to improve our services.</p>
+                                <div style="display: flex;">
+                                    <div>
+                                        <img src="images/sagarpfpcircular.png" width="100" height="100">
+                                        <h3>Sagar Janjoted</h3>
+                                        <p style="color:#333;">Co-Founder</p>
+                                    </div>
+                              </div>
+                            </div>
+                          
+                          </div>
+                        </div>
+                    </section>
+			    </div>
+            </div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $('.review-container').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000 // Set the time interval for slide change
+        });
+    });
+</script>
+

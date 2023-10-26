@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="./service.css">
+    <!-- Boxicons start -->
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+    <!-- Boxicons end -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- font awesome start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome end -->
+    
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: lightcoral; */
+}
+
+.wrapper{
+    font-family: 'raleway';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fafafa;
+}
+.wrapper h1{
+    font-size: 3em;
+    margin: 25px 0;
+    text-align: center;
+    font-weight: 500;
+    /* color:rgb(255, 0, 82); */
+
+}
+span{
+    color: #fc3468;
+}
+#para1{
+    font-size: 28px;
+    font-weight: 300;
+}
+.content-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin-top: 30px;
+
+}
+.card{
+    min-height: 220px;
+    width: 320px;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #ffff;
+    margin: 10px 4px;
+    cursor: pointer;
+    box-shadow:0px 15px 25px rgba(0, 0, 0, 0.2) ;
+    transition: 0.3s;
+}
+ i {
+    font-size: 50px;
+    padding: 10px;
+    margin: 5px;
+    color: #49289e;
+   }
+.card h2{
+    margin-bottom: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+.card p{
+    color: #6c757d;
+    text-align: center;
+}
+.card:hover  i,
+.card:hover p{
+    color: #fff;
+}
+.card:hover h2{
+    font-weight: 600;
+    color:#f2f2f2 ;
+}
+.card:nth-child(1):hover{
+    background: linear-gradient(45deg,
+                                   rgba(255,28,8,0.7) 0%,
+                                    rgba(255,0,82,0.7) 100%),
+                                    url(./download.png);
+    background-size: cover;
+}
+.card:nth-child(2):hover{
+    background: linear-gradient(45deg,
+                                   rgba(255,28,8,0.7) 0%,
+                                    rgba(255,0,82,0.7) 100%),
+                                    url(./download.png);
+    background-size: cover;
+}
+.card:nth-child(3):hover{
+    background: linear-gradient(45deg,
+                                   rgba(255,28,8,0.7) 0%,
+                                    rgba(255,0,82,0.7) 100%),
+                                    url(./download.png);
+    background-size: cover;
+}
+.card:nth-child(4):hover{
+    background: linear-gradient(45deg,
+                                   rgba(255,28,8,0.7) 0%,
+                                    rgba(255,0,82,0.7) 100%),
+                                    url(./download.png);
+    background-size: cover;
+}
+.card:nth-child(5):hover{
+    background: linear-gradient(45deg,
+                                   rgba(255,28,8,0.7) 0%,
+                                    rgba(255,0,82,0.7) 100%),
+                                    url(./download.png);
+    background-size: cover;
+}
+.card:nth-child(6):hover{
+    background: linear-gradient(45deg,
+                                   rgba(255,28,8,0.7) 0%,
+                                    rgba(255,0,82,0.7) 100%),
+                                    url(./download.png);
+    background-size: cover;
+}
+
+@media(max-width:991px)
+{
+    .wrapper{
+        padding: 25px;
+    }
+    .wrapper h1{
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+    .content-box{
+        flex-direction: column;
+        width: 100%;
+    }
+    .card{
+        min-width: 300px;
+        margin: 10px auto;
+    }
+}
+
+/* input section for submit button start */
+.card a {
+    position: relative;
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 8px 20px;
+    margin-top: 10px;
+    background-color:#fc3468;
+    color: black;
+    border-radius: 15px ;
+    cursor: pointer;
+    transition: 0.3s all;
+    overflow: none;
+}
+a:hover{
+    background-color: #fff;
+    /* box-shadow: 0px 2px 10px 5px #fff; */
+    /* width: 50%; */
+    /* height: 50%; */
+
+}
+
+.navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Slightly darker shadow color */
+            padding: 10px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #040081;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin-left: 300px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+        .nav-links a i {
+            color: #fc3468; /* Blue color */
+        }
+
+        .nav-links li a:hover {
+            color:	#fc3468;
+        }
+/* input section for submit button end */
+</style>
+<body>
+    <nav class="navbar">
+        <div class="container">
+
+            <div class="logo"><img src ="static/logo.jpg" height="75px" width="75px" style="justify-content: center; margin-bottom: auto;">Medicare</div>
+            <ul class="nav-links">
+                <li><a href=" http://127.0.0.1:8000/"><i class="bi bi-house-door-fill"></i> Home</a></li>
+                <li><a href=" http://127.0.0.1:8000/services"><i class="bi bi-tools"></i> Services</a></li>
+                <li><a href=" http://127.0.0.1:8000/plan"><i class="bi bi-tools"></i>Plans</a></li>
+
+                <li><a href=" http://127.0.0.1:8000/aboutus"><i class="bi bi-info-circle-fill"></i> About Us</a></li>
+                <li><a href="#"><i class="bi bi-envelope-fill"></i> Contact</a></li>
+            </ul>
+            <a href="http://127.0.0.1:8000/login" class="book-now-button"><i class="bi bi-person-fill"></i> Login/Signup</a>
+        </div>
+    </nav>
+    
+    <div class="wrapper">
+        <h1><span>Our</span> Services</h1>
+        <p id="para1">24/7 support for when you need us the most! </p>
+
+        <div class="content-box">
+            <div class="card">
+                
+                
+                <!-- <i class="fa-solid fa-truck-medical fa-xl"></i> -->
+                <i class="fas fa-ambulance"></i>
+                <!-- <i class="bx bx-bar-chart bx-md"></i> -->
+                <h2>Advanced Life Support</h2>
+                <p>
+                    ALS ambulance is staffed by a Paramedic and is used to transport patients who require high level of care, cardiac monitor and Ventilator during transport. It is an simply called Mobile I.C.U ambulance.
+                </p>
+                <a href="http://127.0.0.1:8000/book">Book Now</a>
+            </div>
+
+            <div class="card">
+                <!-- <i class="bx bx-ambulance bx-md"></i> -->
+                <!-- <i class="bx bx-laptop bx-md"></i> -->
+                <!-- <i class="fa-solid fa-truck-medical fa-xl"></i> -->
+                <i class="fas fa-ambulance"></i>
+                <h2>Basic Life Support</h2>
+                <p>
+                    BLS Ambulance provide transport to patients who are non ambulatory, bed confined, do not require cardiac monitoring and are in a non-life threatening condition.
+                </p>
+                <a href="http://127.0.0.1:8000/book">Book Now</a>
+                <!-- <input type="submit" value="Submit"> -->
+            </div>
+
+            <div class="card">
+                <!-- <i class="bx bx-ambulance bx-md"></i> -->
+                <!-- <i class="bx bx-mail-send bx-md"></i> -->
+                <!-- <i class="fa-solid fa-truck-medical fa-xl "></i> -->
+                <i class="fas fa-ambulance"></i>
+                <h2>Patient Transport</h2>
+                <p>
+                    Patient Transport ambulance is the most basic type of transport available to patients requring ambulatory support for their healthcare appoints, or for admission to and discharge form hospital.
+                </p>
+                <a href="http://127.0.0.1:8000/book">Book Now</a>
+                <!-- <input type="submit" value="Submit"> -->
+            </div>
+
+            <div class="card">
+                <!-- <i class="bx bx-ambulance bx-md"></i> -->
+                <!-- <i class="bx bx-car bx-md"></i> -->
+                <!-- <i class="fa-solid fa-truck-medical fa-xl"></i> -->
+                <i class="fas fa-ambulance"></i>
+                <h2>Medical Utility Vehicle</h2>
+                <p>
+                    The Medical Utility Vehicle is a state-of-the-art small or large van that is designed to facilitate the movement & transfer of patients.
+                </p>
+                <a href="http://127.0.0.1:8000/book">Book Now</a>
+                <!-- <input type="submit" value="Submit"> -->
+            </div>
+
+            <div class="card">
+                <!-- <i class="bx bx-ambulance bx-md"></i> -->
+                <!-- <i class="bx bx-mail-send bx-md"></i> -->
+                <!-- <i class="fa-solid fa-truck-medical fa-xl"></i> -->
+                <i class="fas fa-ambulance"></i>
+                <h2>Mortuary</h2>
+                <p>
+                    Mortuary Van/Ambulance helps in the transportation of a deceased Patients from one place to another place.
+                </p>
+                <a href="http://127.0.0.1:8000/book">Book Now</a>
+                <!-- <input type="submit" value="Submit"> -->
+            </div>
+
+            <div class="card">
+                <!-- <i class="bx bx-ambulance bx-md"></i> -->
+                <!-- <i class="bx bx-paint bx-md"></i> -->
+                <!-- <i class="fa-solid fa-truck-medical fa-xl"></i> -->
+                <i class="fas fa-helicopter"></i>
+                <h2>Air Ambulance</h2>
+                <p>
+                    Air ambulance help in transfer of patients across long distances or in extreme situation in both the emergency and non-emergency situation.
+                </p>
+                <a href="http://127.0.0.1:8000/book">Book Now</a>
+                <!-- <input type="submit" value="Submit"> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

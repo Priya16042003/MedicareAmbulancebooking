@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Details</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            background-color: #666;
+            color: #fff;
+            padding: 10px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        .booking-info {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2.total-amount {
+            background-color: #666;
+            color: #fff;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+ 
+    <h1>Booking Details</h1>
+    
+    <div class="booking-info">
+        <h2>Your Booking Information:</h2>
+        <p><strong>Your Name:</strong> {{ AmbulanceBooking.your_name }}</p>
+        <p><strong>Phone Number:</strong> {{ AmbulanceBooking.phone_number }}</p>
+        <p><strong>Pickup Location:</strong> {{ AmbulanceBooking.pickup_location }}</p>
+        <p><strong>Date:</strong> {{ AmbulanceBooking.date }}</p>
+        <p><strong>Time:</strong> {{ AmbulanceBooking.time }}</p>
+        <p><strong>Ambulance Type:</strong> {{ AmbulanceBooking.ambulance_type }}</p>
+        <p><strong>Additional Comments:</strong> {{ AmbulanceBooking.comments }}</p>
+    </div>
+
+    <h2 class="total-amount">Total Amount: ${{ AmbulanceBooking.total_amount }}</h2>
+    <form action="{% url 'process_payment' %}" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="amount" value="{{ AmbulanceBooking.total_amount }}">
+        <!-- Include other necessary form fields like name, email, etc. -->
+        <button id="pay-button" type="button">Pay</button>
+
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+        <script>
+            document.getElementById("pay-button").addEventListener("click", function () {
+                var options = {
+                    "key": "rzp_test_27ICZnfVBzKJlI",
+                    "amount":15100,
+                    "currency": "INR",
+                    "name": "Medicare",
+                    "description": "Payment Description",
+                    "order_id": "{{ payment.id }}",
+                    "handler": function (response) {
+                        // Handle the payment response here (e.g., send to your server for verification)
+                    },
+                    "prefill": {
+                        "name": "User's Name",
+                        "email": "user@example.com",
+                        "contact": "1234567890"
+                    }
+                };
+                var rzp = new Razorpay(options);
+                rzp.open();
+            });
+        </script>
+        
+
+    </form>
+</body>
+</html>

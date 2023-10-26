@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        var options = {
+            "key": "rzp_test_27ICZnfVBzKJlI",
+            "amount":"{{ payment.amount}}",
+            "currency": "INR",
+            "name": "Medicare",
+            "description": "Payment Description",
+            "order_id": "{{ payment.id }}",
+            "handler": function (response) {
+                // Handle the payment response here (e.g., send to your server for verification)
+            },
+            "prefill": {
+                "name": "User's Name",
+                "email": "user@example.com",
+                "contact": "1234567890"
+            }
+        };
+        var rzp = new Razorpay(options);
+        rzp.open();
+    </script>
+    
+
+    <form action="{% url 'process_payment' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="amount" placeholder="Amount">
+        <!-- Add other required fields -->
+        <button type="submit">Pay with Razorpay</button>
+    </form>
+    
+    
+</body>
+</html>
